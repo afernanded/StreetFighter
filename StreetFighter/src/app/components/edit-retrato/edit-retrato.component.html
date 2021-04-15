@@ -1,0 +1,7 @@
+<div class="personaje">
+  <img [src]="rutaImagen" alt="">
+</div>
+<div class="botones">
+  <input type="file" (change)="onChange($event.target.files)" class="btn btn-dark foto" />
+  <a class="btn btn-dark" (click)="setLuchador()">Actualizar</a>
+</div>

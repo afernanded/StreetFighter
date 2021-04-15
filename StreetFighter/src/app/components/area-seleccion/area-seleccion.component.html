@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<img src="assets/images/SF_logo.png">
+<h1 class="titulo">{{titulo}}</h1>
+  <div class="container">
+    <div class="col-md-4">
+      <app-retrato-luchador *ngFor="let luchador of luchadores; let i = index;"
+                            [luchadores]="luchador"
+                            [numLuchadorSeleccionado]="numLuchadorSeleccionado"
+                            [indiceLuchador]="i"
+                            (actualizarNumLuchadorSeleccionado)="actualizarIndice($event)"
+      ></app-retrato-luchador>
+    </div>
+    <div *ngIf="numLuchadorSeleccionado !== -1" class="image">
+      <img [src]="gifSource">
+    </div>
+    <div class="col-md-4" *ngIf="numLuchadorSeleccionado !== -1">
+      <div class="name">
+        <h1>{{luchadores[numLuchadorSeleccionado].nombre}}</h1>
+      </div>
+      <div class="atrib">
+        <app-atributos-luchador
+        [fuerza]="luchadores[numLuchadorSeleccionado].fuerza"
+        [destreza]="luchadores[numLuchadorSeleccionado].destreza"
+        [vida]="luchadores[numLuchadorSeleccionado].vida"
+        ></app-atributos-luchador>
+        <button [routerLink]="['/antes-luchar',luchadores[numLuchadorSeleccionado].id]">
+          <div></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+

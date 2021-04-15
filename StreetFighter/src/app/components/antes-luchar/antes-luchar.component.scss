@@ -1,0 +1,14 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+  background: rgba(76, 175, 80, 0.3);
+  border-radius: 15px;
+  border: 3px groove #006400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.lRandom {
+  transform: scaleX(-1);
+}
+

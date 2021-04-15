@@ -1,0 +1,9 @@
+<div class="col-md-6">
+  <img (mouseenter)="estaHover=true"
+       (mouseleave)="numLuchadorSeleccionado === indiceLuchador ? estaHover = true : estaHover = false"
+       (click)="actualizarPulsado()"
+       [ngStyle]="estaHover ? estiloLuchadorHover : {}"
+       [ngStyle]="numLuchadorSeleccionado === indiceLuchador ? estiloLuchadorHover : {}"
+       [src]="imageSource"
+       [width]="imageSize">
+</div>

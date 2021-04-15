@@ -1,0 +1,18 @@
+<div style="text-align: center">
+  <div style="text-align:center">
+    <nav class="navbar navbar-expand navbar navbar-dark bg-dark">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/bienvenida']" [routerLinkActive]="['active']">Bienvenida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/seleccion']" [routerLinkActive]="['active']">Seleccion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/modificar-retratos']" [routerLinkActive]="['active']">Modificar Retratos</a>
+        </li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>
